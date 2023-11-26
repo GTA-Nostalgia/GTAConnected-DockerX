@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   gtaconnected:
-    image: ghcr.io/GarnetSunset/GTAConnected-Docker:main
+    image: ghcr.io/garnetsunset/gtaconnected-linux:main
     ports:
       - "22000:22000" # Map port 22000 on the host to port 22000 in the container
     volumes:
