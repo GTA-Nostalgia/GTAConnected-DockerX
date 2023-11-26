@@ -1,0 +1,16 @@
+
+# General
+*.log
+*.tar.gz
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Docker
+**/node_modules
+**/venv
+Dockerfile.*.temp
+
+.idea/

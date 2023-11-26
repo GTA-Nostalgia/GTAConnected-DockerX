@@ -1,0 +1,19 @@
+# Use a base Windows image
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
+
+# Set a working directory
+WORKDIR /app
+
+# Copy the VBScript for unzipping
+COPY unzip.vbs /app/unzip.vbs
+
+# Download the GTA Connected server package
+ADD https://gtaconnected.com/downloads/GTAC-Server-Win32-1.5.12.zip /app/
+
+# Run the VBScript to unzip the file
+RUN cscript.exe //NoLogo unzip.vbs GTAC-Server-Win32-1.5.12.zip .
+
+EXPOSE 22000
+
+# Command to run the server (adjust the path according to the extracted server executable)
+CMD ["Server.exe"]

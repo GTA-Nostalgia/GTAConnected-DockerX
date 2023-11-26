@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  gtaconnected:
+    image: ghcr.io/GarnetSunset/GTAConnected-Docker:main
+    ports:
+      - "22000:22000" # Map port 22000 on the host to port 22000 in the container
+    volumes:
+      - ./server.xml:/app/GTAC-Server-Linux-1.5.12.tar-1/server.xml # Adjust the path as needed
+    restart: unless-stopped
