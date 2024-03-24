@@ -8,10 +8,10 @@ WORKDIR /app
 COPY unzip.vbs /app/unzip.vbs
 
 # Download the GTA Connected server package
-ADD https://gtaconnected.com/downloads/GTAC-Server-Win32-1.5.12.zip /app/
+ADD https://gtaconnected.com/downloads/GTAC-Server-Win32-1.6.1.zip /app/
 
 # Run the VBScript to unzip the file
-RUN cscript.exe //NoLogo unzip.vbs GTAC-Server-Win32-1.5.12.zip .
+RUN cscript.exe //NoLogo unzip.vbs GTAC-Server-Win32-1.6.1.zip .
 
 EXPOSE 22000
 
