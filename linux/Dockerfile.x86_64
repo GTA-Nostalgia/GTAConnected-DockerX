@@ -6,13 +6,13 @@ FROM ubuntu:latest
 WORKDIR /app
 
 # Download the GTA Connected server package
-ADD https://gtaconnected.com/downloads/GTAC-Server-Linux-1.5.12.tar.gz /app/
+ADD https://gtaconnected.com/downloads/GTAC-Server-Linux-1.6.1.tar.gz /app/
 
 # Unpack the tarball
-RUN tar -xzf GTAC-Server-Linux-1.5.12.tar.gz && \
-    rm GTAC-Server-Linux-1.5.12.tar.gz
+RUN tar -xzf GTAC-Server-Linux-1.6.1.tar.gz && \
+    rm GTAC-Server-Linux-1.6.1.tar.gz
 
 EXPOSE 22000
 
 # Command to run the server
-CMD ["./GTAC-Server-Linux-1.5.12.tar-1/Server"]
+CMD ["./GTAC-Server-Linux-1.6.1.tar-1/Server"]
